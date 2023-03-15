@@ -6,9 +6,6 @@
     margin: 0;
     padding: 0;
 }
-html {
-    overflow: hidden;
-}
 
 body {
     font-family: Montserrat;
@@ -17,7 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: hsl(30, 38%, 92%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .card {
@@ -35,13 +32,13 @@ body {
     padding: 25px;
 }
 
-.img {
+
+
+img {
     width: 50%;
-    height: 360px;
-    background-image: url("../images/image-product-desktop.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;   
 }
 
 .info p {
@@ -119,11 +116,14 @@ footer {
         max-height: 80vh;        
     }
 
-    .img {
+    img {
+        content:url("/images/image-product-mobile.jpg");
         width: 100%;
-        height: 300px;
+        height: 50%;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: 50% 50%;
     }
-
     .info {
         max-width: 100%;
         min-height: 300px;
